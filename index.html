@@ -1,36 +1,158 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily Deals Mart — Discover More. Spend Smarter.</title>
-<link rel="preconnect" href="https://images.unsplash.com"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Deals Mart</title>
 <style>
-:root{--green:#183f35;--green2:#24594a;--lime:#d8e8bd;--cream:#f7f7f2;--ink:#18231f;--muted:#78827c;--line:#e7eae4;--white:#fff}
-*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif}a{text-decoration:none;color:inherit}button{font:inherit;cursor:pointer}
-.announcement{background:var(--green);color:#f5f7f0;text-align:center;padding:9px;font-size:11px;letter-spacing:.12em}.header{background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line)}.nav{max-width:1240px;margin:auto;padding:17px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font-size:22px;font-weight:700;letter-spacing:-1px}.logo span{color:#77905d}.navlinks{display:flex;gap:28px;font-size:13px;color:#45534b}.navlinks a:hover{color:#78935d}.right{display:flex;gap:10px}.navbtn{border:1px solid var(--line);background:white;border-radius:30px;padding:10px 15px;font-size:12px}.hero{max-width:1240px;margin:24px auto;padding:0 24px}.hero-wrap{display:grid;grid-template-columns:1fr 1fr;background:#e9eee5;min-height:490px;overflow:hidden;border-radius:5px}.hero-copy{padding:70px 9%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#718954}.hero h1{font:clamp(43px,5vw,68px)/1.02 'Playfair Display',serif;letter-spacing:-1.8px;margin:18px 0 14px;color:#1b332a}.hero p{color:#66736a;line-height:1.8;font-size:14px;max-width:400px}.cta{display:inline-flex;align-items:center;gap:20px;background:var(--green);color:white;border:0;padding:15px 20px;margin-top:22px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.cta:hover{background:#2b6251}.hero-photo{position:relative;min-height:400px;background:#d5ddd0}.hero-photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}.hero-label{position:absolute;bottom:24px;left:24px;background:#fff;padding:13px 17px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
-.trust{max-width:1192px;margin:0 auto;padding:22px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;border-bottom:1px solid var(--line)}.trust div{text-align:center;font-size:11px;color:#58655d}.trust b{display:block;color:var(--green);font-size:12px;margin-bottom:5px}
-.section{max-width:1240px;margin:68px auto 0;padding:0 24px}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.over{font-size:10px;color:#7c925f;letter-spacing:.2em;text-transform:uppercase;font-weight:700}.head h2{font:36px 'Playfair Display',serif;margin:8px 0 0}.muted{font-size:12px;color:var(--muted)}
-.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.cat{background:#fff;text-align:center;padding:25px 12px;border:1px solid var(--line);transition:.2s}.cat:hover{transform:translateY(-4px);box-shadow:0 12px 24px #1d39200d}.cat-icon{font-size:28px;color:var(--green);display:block;margin-bottom:12px}.cat strong{font-size:12px}
-.featured{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.card{background:#fff;border:1px solid var(--line);position:relative}.photo{height:240px;background:#eef0e9;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.card:hover .photo img{transform:scale(1.04)}.flag{position:absolute;top:13px;left:13px;background:var(--lime);padding:6px 9px;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.info{padding:16px}.category{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#89938b}.info h3{font-size:13px;margin:7px 0 10px}.price{font-size:14px;color:var(--green);font-weight:700}.old{font-size:11px;color:#9ba39c;text-decoration:line-through;margin-left:7px;font-weight:400}.add{width:100%;margin-top:13px;border:1px solid #cbd4cb;background:#fff;padding:10px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.add:hover{background:var(--green);color:#fff;border-color:var(--green)}
-.editorial{max-width:1192px;margin:70px auto 0;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:16px}.editorial article{min-height:300px;position:relative;overflow:hidden;background:#dce4d8}.editorial img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}.edcopy{position:absolute;inset:auto 0 0;padding:35px;color:white;background:linear-gradient(transparent,#0009)}.edcopy small{font-size:10px;letter-spacing:.15em;text-transform:uppercase}.edcopy h3{font:29px 'Playfair Display',serif;margin:8px 0}
-.news{max-width:1192px;margin:70px auto;padding:35px 24px;background:#e8ede3;display:flex;align-items:center;justify-content:space-between;gap:20px}.news h2{font:30px 'Playfair Display',serif;margin:6px 0}.news p{font-size:12px;color:#6b776e}.newsletter{display:flex;max-width:390px;width:100%}.newsletter input{min-width:0;flex:1;padding:14px;border:1px solid #d4ddd2;background:#fff}.newsletter button{background:var(--green);color:#fff;border:0;padding:0 17px;font-size:10px;letter-spacing:.08em}
-footer{background:#16392f;color:#fff;padding:48px 24px 22px}.foot{max-width:1192px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}.foot p{font-size:12px;line-height:1.8;color:#c1d0c6;max-width:360px}.foot h4{font-size:10px;letter-spacing:.16em;color:#d9e8bd;text-transform:uppercase}.foot a{display:block;font-size:12px;color:#d3ddd6;margin:12px 0}.copy{max-width:1192px;margin:32px auto 0;padding-top:18px;border-top:1px solid #426055;color:#b6c6bc;font-size:10px}
-.cart{display:none;position:fixed;right:20px;top:80px;width:min(360px,calc(100vw - 40px));padding:20px;background:#fff;z-index:40;box-shadow:0 18px 50px #0002;border:1px solid var(--line)}.cart.open{display:block}.cart h3{font:24px 'Playfair Display',serif;margin:0 0 14px}.cartline{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:10px 0;font-size:12px}.cartnote{font-size:10px;color:#89938b;line-height:1.6;margin-top:14px}
-@media(max-width:760px){.nav{padding:14px}.navlinks{display:none}.logo{font-size:19px}.hero{padding:0 14px;margin-top:14px}.hero-wrap{grid-template-columns:1fr}.hero-copy{padding:42px 8% 32px}.hero-photo{min-height:260px}.trust{grid-template-columns:repeat(2,1fr);padding:20px 14px}.section{padding:0 14px;margin-top:52px}.head h2{font-size:30px}.cats{grid-template-columns:repeat(2,1fr)}.cat:last-child{grid-column:span 2}.featured{grid-template-columns:repeat(2,1fr);gap:10px}.photo{height:155px}.info{padding:11px}.editorial{padding:0 14px;grid-template-columns:1fr;margin-top:50px}.editorial article{min-height:240px}.news{margin:50px 14px;display:block;padding:27px 20px}.newsletter{margin-top:18px}.foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:span 2}}
-</style></head><body>
-<div class="announcement">COMPLIMENTARY SUPPORT &nbsp; • &nbsp; EVERYDAY FINDS, BETTER DEALS</div>
-<header class="header"><nav class="nav"><a class="logo" href="#">Daily Deals <span>Mart.</span></a><div class="navlinks"><a href="#categories">Shop</a><a href="#featured">Best sellers</a><a href="#discover">Discover</a><a href="#footer">Contact</a></div><div class="right"><button class="navbtn" onclick="document.getElementById('search').focus()">⌕ Search</button><button class="navbtn" onclick="toggleCart()">Bag (<span id="count">0</span>)</button></div></nav></header>
-<main><section class="hero"><div class="hero-wrap"><div class="hero-copy"><div class="eyebrow">Thoughtful finds for everyday living</div><h1>Discover more.<br>Spend smarter.</h1><p>From little upgrades to everyday essentials, find the things you love — with deals worth discovering.</p><a class="cta" href="#featured">Shop the collection <span>→</span></a></div><div class="hero-photo"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85" onerror="this.src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85'" alt="Curated shopping lifestyle"><div class="hero-label">The everyday edit · 2026</div></div></div></section>
-<div class="trust"><div><b>Curated collections</b>Find your everyday favourites</div><div><b>Value-led picks</b>Deals worth discovering</div><div><b>Easy browsing</b>Shop across categories</div><div><b>Customer-first</b>Here to help you choose</div></div>
-<section class="section" id="categories"><div class="head"><div><div class="over">Explore the store</div><h2>Shop by category</h2></div><span class="muted">A good find for every day.</span></div><div class="cats"><a class="cat" href="#featured"><span class="cat-icon">⌁</span><strong>Mobile Accessories</strong></a><a class="cat" href="#featured"><span class="cat-icon">◈</span><strong>Electronics</strong></a><a class="cat" href="#featured"><span class="cat-icon">✦</span><strong>Fashion</strong></a><a class="cat" href="#featured"><span class="cat-icon">❋</span><strong>Beauty</strong></a><a class="cat" href="#featured"><span class="cat-icon">⌂</span><strong>Home & Kitchen</strong></a></div></section>
-<section class="section" id="featured"><div class="head"><div><div class="over">The good stuff</div><h2>Popular right now</h2></div><input id="search" oninput="filterProducts()" placeholder="Search products..." style="max-width:220px;width:45%;padding:12px;border:1px solid #dfe5dc;background:white"></div>
-<div class="featured" id="products">
-<article class="card" data-name="wireless earbuds"><span class="flag">Bestseller</span><div class="photo"><img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=700&q=80" alt="Wireless earbuds"></div><div class="info"><div class="category">Electronics</div><h3>Wireless Earbuds</h3><div class="price">Rs. 1,999 <span class="old">Rs. 2,499</span></div><button class="add" onclick="add('Wireless Earbuds',1999)">Add to bag</button></div></article>
-<article class="card" data-name="phone stand"><div class="photo"><img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=700&q=80" alt="Phone accessory"></div><div class="info"><div class="category">Mobile accessories</div><h3>Adjustable Phone Stand</h3><div class="price">Rs. 799</div><button class="add" onclick="add('Adjustable Phone Stand',799)">Add to bag</button></div></article>
-<article class="card" data-name="classic tote bag"><span class="flag">New arrival</span><div class="photo"><img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=700&q=80" alt="Classic tote bag"></div><div class="info"><div class="category">Fashion</div><h3>Classic Everyday Tote</h3><div class="price">Rs. 1,499</div><button class="add" onclick="add('Classic Everyday Tote',1499)">Add to bag</button></div></article>
-<article class="card" data-name="home diffuser"><div class="photo"><img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=700&q=80" alt="Home fragrance"></div><div class="info"><div class="category">Home & living</div><h3>Home Aroma Diffuser</h3><div class="price">Rs. 2,499</div><button class="add" onclick="add('Home Aroma Diffuser',2499)">Add to bag</button></div></article>
-</div><p class="muted" style="font-size:10px;line-height:1.6;margin-top:14px">Product images, names and prices are demonstration content. Replace with verified supplier products and actual prices before launch.</p></section>
-<section class="editorial" id="discover"><article><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80" alt="Fashion collection"><div class="edcopy"><small>Style, made simple</small><h3>Little things. Big upgrades.</h3></div></article><article><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=80" alt="Beauty and self care"><div class="edcopy"><small>Your daily essentials</small><h3>Find your new favourites.</h3></div></article></section>
-<section class="news"><div><div class="over">Stay in the loop</div><h2>Good deals, delivered.</h2><p>Sign up area preview — newsletter service is not connected.</p></div><form class="newsletter" onsubmit="event.preventDefault();alert('Thanks! Newsletter signup is a design preview and is not connected yet.')"><input type="email" placeholder="Your email address" required><button>JOIN US</button></form></section></main>
-<footer id="footer"><div class="foot"><div><a class="logo" href="#" style="color:white">Daily Deals <span>Mart.</span></a><p>Everyday discoveries across tech, style, beauty and home. A smarter, simpler way to find the things you need.</p></div><div><h4>Explore</h4><a href="#categories">Shop categories</a><a href="#featured">Popular products</a><a href="#discover">Discover</a></div><div><h4>Help</h4><a href="mailto:hello@dailydealsmart.example">Contact</a><a href="#footer">Delivery information</a><a href="#footer">Returns & support</a></div></div><div class="copy">© 2026 Daily Deals Mart. All rights reserved. · Storefront preview</div></footer>
-<div class="cart" id="cart"><h3>Your shopping bag</h3><div id="cartitems">Your bag is empty.</div><div style="display:flex;justify-content:space-between;margin-top:14px;font-weight:700"><span>Total</span><span id="total">Rs. 0</span></div><p class="cartnote">This is a front-end preview cart. Checkout, COD order submission, online payments, supplier integration and order management are not connected yet.</p></div>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f7f7f2;color:#18231f}
+header{background:#183f35;color:white;padding:18px;text-align:center}
+header h1{margin:0}
+nav{padding:14px;text-align:center;background:white}
+nav a{margin:10px;color:#183f35;text-decoration:none;font-weight:bold}
+.hero{text-align:center;padding:45px 15px;background:#e9eee5}
+.hero h2{font-size:34px;color:#183f35}
+button{background:#183f35;color:white;border:0;padding:12px 18px;cursor:pointer;border-radius:5px}
+section{padding:25px 15px;max-width:1000px;margin:auto}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
+.card{background:white;padding:15px;border:1px solid #ddd;border-radius:7px}
+.card h3{margin-bottom:8px}
+.price{font-weight:bold;color:#183f35}
+.card button{width:100%;margin-top:12px}
+.cart{background:white;padding:18px;margin-top:20px;border:1px solid #ddd;border-radius:7px}
+.cart-item{padding:8px;border-bottom:1px solid #ddd}
+input,textarea{width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:4px}
+footer{background:#183f35;color:white;text-align:center;padding:25px;margin-top:35px}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Daily Deals Mart</h1>
+<p>Discover More. Spend Smarter.</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#checkout">Order</a>
+</nav>
+
+<div class="hero" id="home">
+<h2>Welcome to Daily Deals Mart</h2>
+<p>Everyday products at great prices.</p>
+<a href="#products"><button>Shop Now</button></a>
+</div>
+
+<section id="products">
+<h2>Our Popular Products</h2>
+<div class="products">
+
+<div class="card">
+<h3>Wireless Earbuds</h3>
+<p>Electronics</p>
+<p class="price">Rs. 1,999</p>
+<button onclick="add('Wireless Earbuds',1999)">Add to Bag</button>
+</div>
+
+<div class="card">
+<h3>Adjustable Phone Stand</h3>
+<p>Mobile Accessories</p>
+<p class="price">Rs. 799</p>
+<button onclick="add('Phone Stand',799)">Add to Bag</button>
+</div>
+
+<div class="card">
+<h3>Classic Everyday Tote</h3>
+<p>Fashion</p>
+<p class="price">Rs. 1,499</p>
+<button onclick="add('Classic Tote Bag',1499)">Add to Bag</button>
+</div>
+
+<div class="card">
+<h3>Home Aroma Diffuser</h3>
+<p>Home & Living</p>
+<p class="price">Rs. 2,499</p>
+<button onclick="add('Home Aroma Diffuser',2499)">Add to Bag</button>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="cart">
+<h2>Shopping Bag</h2>
+<div id="items">Your bag is empty.</div>
+<h3>Total: Rs. <span id="total">0</span></h3>
+</div>
+</section>
+
+<section id="checkout">
+<h2>Cash on Delivery Checkout</h2>
+<p>Enter your delivery details to order through WhatsApp.</p>
+
+<form onsubmit="sendOrder(event)">
+<input id="name" placeholder="Your Full Name" required>
+<input id="phone" type="tel" placeholder="Your Phone Number" required>
+<input id="city" placeholder="Your City" required>
+<textarea id="address" placeholder="Complete Delivery Address" required></textarea>
+<button type="submit">Place Order on WhatsApp</button>
+</form>
+</section>
+
+<footer>
+<h3>Daily Deals Mart</h3>
+<p>Thank you for shopping with us!</p>
+<p>© 2026 Daily Deals Mart</p>
+</footer>
+
 <script>
-let bag=[];function add(n,p){bag.push({n,p});draw();document.getElementById('cart').classList.add('open')}function draw(){document.getElementById('count').textContent=bag.length;document.getElementById('cartitems').innerHTML=bag.length?bag.map(x=>`<div class="cartline"><span>${x.n}</span><b>Rs. ${x.p.toLocaleString('en-PK')}</b></div>`).join(''):'Your bag is empty.';document.getElementById('total').textContent='Rs. '+bag.reduce((s,x)=>s+x.p,0).toLocaleString('en-PK')}function toggleCart(){document.getElementById('cart').classList.toggle('open')}function filterProducts(){let q=document.getElementById('search').value.toLowerCase();document.querySelectorAll('.card').forEach(c=>c.style.display=c.dataset.name.includes(q)?'':'none')}
-</script></body></html>
+let bag=[];
+
+function add(name,price){
+bag.push({name,price});
+draw();
+}
+
+function draw(){
+document.getElementById("items").innerHTML=
+bag.length ? bag.map(x=>`<div class="cart-item">${x.name} - Rs. ${x.price.toLocaleString("en-PK")}</div>`).join("") : "Your bag is empty.";
+
+document.getElementById("total").textContent=
+bag.reduce((sum,x)=>sum+x.price,0).toLocaleString("en-PK");
+}
+
+function sendOrder(event){
+event.preventDefault();
+
+if(bag.length===0){
+alert("Please add products to your bag first.");
+return;
+}
+
+let name=document.getElementById("name").value.trim();
+let phone=document.getElementById("phone").value.trim();
+let city=document.getElementById("city").value.trim();
+let address=document.getElementById("address").value.trim();
+
+let products=bag.map(x=>x.name+" - Rs. "+x.price).join("\n");
+let total=bag.reduce((sum,x)=>sum+x.price,0);
+
+let message=
+"NEW ORDER - Daily Deals Mart\n\n"+
+"Name: "+name+"\n"+
+"Phone: "+phone+"\n"+
+"City: "+city+"\n"+
+"Address: "+address+"\n\n"+
+"Products:\n"+products+"\n\n"+
+"Total: Rs. "+total+"\n"+
+"Payment: Cash on Delivery";
+
+window.open("https://wa.me/923266397001?text="+encodeURIComponent(message),"_blank");
+}
+</script>
+
+</body>
+</html>
